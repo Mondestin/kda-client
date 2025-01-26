@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { Bus, Train, Plane } from 'lucide-react';
 import SearchResults from './components/SearchResults';
 import SearchForm from './components/SearchForm';
@@ -234,7 +234,7 @@ function LandingPage() {
 
 function App() {
   return (
-    <Router>
+
       <div className="min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-grow">
@@ -248,7 +248,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </Router>
+
   );
 }
 

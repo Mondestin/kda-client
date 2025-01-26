@@ -16,8 +16,8 @@ export const authService = {
     api.post<AuthResponse>(API_CONFIG.ENDPOINTS.AUTH.LOGIN, {
       email,
       password,
-    }).then(response => {
-      localStorage.setItem('authToken', response.token);
+    }).then((response: { data: AuthResponse }) => {
+      localStorage.setItem('authToken', response.data.token);
       return response;
     }),
 
